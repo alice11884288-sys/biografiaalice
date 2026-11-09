@@ -1,0 +1,458 @@
+
+/* =================================
+   TEMA THE VAMPIRE DIARIES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #100b0d;
+    color: #e8dede;
+    line-height: 1.8;
+}
+
+/* =================================
+   TELA DE ABERTURA
+================================= */
+
+#abertura {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background:
+        radial-gradient(circle at center, #490000 0%, #180000 45%, #000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+}
+
+.conteudo-abertura {
+    padding: 25px;
+    animation: aparecer 2s ease;
+}
+
+.frase-superior {
+    color: #b68c8c;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#abertura h1 {
+    font-size: clamp(40px, 8vw, 75px);
+    line-height: 1.1;
+    letter-spacing: 7px;
+    color: #e5dada;
+    text-shadow: 0 0 20px #800000;
+}
+
+#abertura h1 span {
+    display: block;
+    color: #a00000;
+    letter-spacing: 12px;
+    text-shadow: 0 0 20px #d00000;
+}
+
+.linha-decorativa {
+    width: 180px;
+    height: 2px;
+    background: #8b0000;
+    margin: 30px auto;
+    box-shadow: 0 0 15px red;
+}
+
+#abertura h2 {
+    color: #e2caca;
+    font-size: 24px;
+    border: none;
+}
+
+.frase {
+    color: #bdaaaa;
+    font-style: italic;
+    text-align: center;
+    margin: 25px 0 35px;
+}
+
+#entrar {
+    background: transparent;
+    border: 1px solid #a00000;
+    color: #fff;
+    padding: 14px 45px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: Georgia, serif;
+}
+
+#entrar:hover {
+    background: #8b0000;
+    box-shadow: 0 0 25px #d00000;
+    letter-spacing: 8px;
+}
+
+.assinatura {
+    color: #755555;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 55px;
+    text-align: center;
+}
+
+#abertura.sumir {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   CABEÇALHO E MENU
+================================= */
+
+header {
+    background: #080506;
+    padding: 25px;
+    border-bottom: 2px solid #8b0000;
+    text-align: center;
+}
+
+.logo {
+    color: #a00000;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #d9c3c3;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d00000;
+    text-shadow: 0 0 10px red;
+}
+
+
+/* =================================
+   SEÇÕES
+================================= */
+
+section {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 45px;
+}
+
+
+/* =================================
+   INÍCIO
+================================= */
+
+#hero {
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(10, 0, 0, 0.85),
+        rgba(35, 0, 0, 0.9)
+    );
+
+    border: 1px solid #720000;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(139, 0, 0, 0.3);
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #8b0000;
+    box-shadow: 0 0 25px #8b0000;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    color: #a00000;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+#hero h2 {
+    color: #d00000;
+    font-size: 35px;
+    text-shadow: 0 0 12px #8b0000;
+}
+
+
+/* =================================
+   TÍTULOS
+================================= */
+
+h2 {
+    color: #c00000;
+    border-bottom: 2px solid #650000;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: #d9a0a0;
+    margin-bottom: 15px;
+}
+
+
+/* =================================
+   TEXTOS
+================================= */
+
+p {
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+
+/* =================================
+   SOBRE
+================================= */
+
+#sobre {
+    background: #191012;
+    border-left: 4px solid #8b0000;
+    border-radius: 8px;
+}
+
+
+/* =================================
+   HABILIDADES
+================================= */
+
+#habilidades {
+    background: #170d10;
+    border-radius: 10px;
+}
+
+.habilidade {
+    background: #240f14;
+    padding: 20px;
+    border-left: 4px solid #8b0000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.habilidade h3 {
+    color: #d00000;
+}
+
+
+/* =================================
+   PROJETOS
+================================= */
+
+#projetos {
+    background: #191012;
+    border-radius: 10px;
+}
+
+#projetos article {
+    background: #240f14;
+    padding: 25px;
+    border-left: 4px solid #a00000;
+    border-radius: 8px;
+}
+
+
+/* =================================
+   CURRÍCULO
+================================= */
+
+#curriculo {
+    background: #170d10;
+    border-radius: 10px;
+}
+
+#curriculo a {
+    color: #e05b5b;
+    font-weight: bold;
+}
+
+
+/* =================================
+   CONTATO
+================================= */
+
+#contato {
+    background: #191012;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    color: #d9a0a0;
+}
+
+input,
+textarea {
+    background: #0c0809;
+    border: 1px solid #650000;
+    border-radius: 7px;
+    padding: 13px;
+    color: white;
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d00000;
+    box-shadow: 0 0 10px #650000;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =================================
+   BOTÕES
+================================= */
+
+button,
+.botao {
+    display: inline-block;
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+button:hover,
+.botao:hover {
+    background: #bd0000;
+    box-shadow: 0 0 15px #a00000;
+}
+
+
+/* =================================
+   MENSAGEM DO FORMULÁRIO
+================================= */
+
+#resposta {
+    color: #d9a0a0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    background: #080506;
+    border-top: 2px solid #800000;
+    text-align: center;
+    padding: 25px;
+    color: #c7a6a6;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    section {
+        margin: 15px;
+        padding: 25px;
+    }
+
+    #hero h2 {
+        font-size: 26px;
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
+
+    .frase-superior {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    #abertura h1 {
+        letter-spacing: 4px;
+    }
+
+    #abertura h1 span {
+        letter-spacing: 6px;
+    }
+
+    #abertura h2 {
+        font-size: 19px;
+    }
+
+}
